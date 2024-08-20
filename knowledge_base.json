@@ -91,7 +91,8 @@
         "Weather report",
         "weather"
       ],
-      "answer": [],
+      "answer": [
+	  ],
       "function": "get_weather"
     },
     {
