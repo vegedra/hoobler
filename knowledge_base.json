@@ -91,8 +91,7 @@
         "Weather report",
         "weather"
       ],
-      "answer": [
-	  ],
+      "answer": [],
       "function": "get_weather"
     },
     {
@@ -119,6 +118,23 @@
       "answer": [
         "I am."
       ]
+    },
+    {
+      "question": [
+        "name"
+      ],
+      "answer": [
+        "Do you want to know my name? It's Hoobler!"
+      ]
+    },
+    {
+      "question": [
+        "time",
+		"what's the time?",
+		"what time is it?"
+      ],
+      "answer": [],
+	  "function": "tell_time"
     }
   ]
 }

@@ -7,7 +7,9 @@ import functions
 Abrir programas;
 Responder perguntas (wikipedia); 
 Ser mais esperto;
-Modo terapia/ELIZA. """
+Modo terapia/ELIZA;
+Tentar implementar um SPELL CHECKER;
+Tentar escolher as respostas baseadas em contexto. """
 
 # Carrega o arquivo JSON com a base da IA
 def load_knowledge_base(file_path):
@@ -49,7 +51,7 @@ def get_answer(user_question, knowledge_base):
                 if func:
                     return func()
             return random.choice(q["answer"])
-    return "I don't understand that question."
+    return "I didn't understand..."
 
 # Adiciona uma nova resposta a uma pergunta existente ou cria uma nova entrada
 def add_or_update_question(knowledge_base, user_question, new_answer):
