@@ -1,6 +1,7 @@
 from datetime import datetime
 import random
 import requests
+import pyjokes
 
 # Receber informações do clima.
 def get_weather():
@@ -17,21 +18,20 @@ def get_weather():
     # Printa o clima e a arte ASCII
     return T
 
-# Conta piadas
-def tell_joke():
-    jokes = [
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "Why did the math book look sad? It had too many problems.",
-        "What do you call fake spaghetti? An impasta!"
-    ]
+# Conta piadas - TODO: OPÇÃO DE IDIOMAS E PIADAS SEM SER DE T.I.
+def tell_joke(): 
+    # Usa a biblioteca Pyjokes para gerar piadas de T.I.
+    jokes = pyjokes.get_jokes(language="en", category="all") 
+    
+    # Retorna uma piada aleatoria da lista de piadas criadas acima
     return random.choice(jokes)
     
 # Fala a hora
 def tell_time():
-    # Define as variaveis para mostrar a hora em tempo real
-    current_time = datetime.now()
-    hour = current_time.hour
-    minute = current_time.minute
-    second = current_time.second
+    # Recebe a data e hora atual
+    now = datetime.now()
 
-    return f"It's {hour:02d}:{minute:02d}."
+    # Formata a data de um jeito mais elegante
+    date = now.strftime("%A - %B %d, %Y")  # e.g., "Wednesday, August 21, 2024"
+
+    return f"It's {date}."

@@ -130,11 +130,22 @@
     {
       "question": [
         "time",
-		"what's the time?",
-		"what time is it?"
+        "what's the time?",
+        "what time is it?",
+		"date",
+		"what's the date?",
+		"day"
       ],
       "answer": [],
-	  "function": "tell_time"
+      "function": "tell_time"
+    },
+    {
+      "question": [
+        "?"
+      ],
+      "answer": [
+        "Can i help?"
+      ]
     }
   ]
 }
