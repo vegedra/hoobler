@@ -1,4 +1,5 @@
 from datetime import datetime
+import core
 import random
 import requests
 import pyjokes
@@ -35,3 +36,7 @@ def tell_time():
     date = now.strftime("%A - %B %d, %Y")  # e.g., "Wednesday, August 21, 2024"
 
     return f"It's {date}."
+
+# Manual
+def help():
+    return "Here is what you can do with me:"

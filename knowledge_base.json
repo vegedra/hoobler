@@ -146,6 +146,14 @@
       "answer": [
         "Can i help?"
       ]
+    },
+	{
+      "question": [
+        "help",
+		"manual"
+      ],
+      "answer": [], 
+	  "function": "help"
     }
   ]
 }
