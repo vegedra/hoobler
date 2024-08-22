@@ -39,4 +39,5 @@ def tell_time():
 
 # Manual
 def help():
+    # Printa um textao explicando o app ou abre um arquivo .txt?
     return "Here is what you can do with me:"

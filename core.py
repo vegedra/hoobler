@@ -43,7 +43,7 @@ def get_answer(user_question, knowledge_base):
                 if func:
                     return func()
             return random.choice(q["answer"])
-    return "Hoobler: I didn't understand..."
+    return "I didn't understand..."
 
 # Adiciona uma nova resposta a uma pergunta existente ou cria uma nova entrada
 def add_or_update_question(knowledge_base, user_question, new_answer):
