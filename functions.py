@@ -3,6 +3,7 @@ import core
 import random
 import requests
 import pyjokes
+from ast import literal_eval
 
 # Receber informações do clima.
 def get_weather():
@@ -36,6 +37,20 @@ def tell_time():
     date = now.strftime("%A - %B %d, %Y")  # e.g., "Wednesday, August 21, 2024"
 
     return f"It's {date}."
+
+# Calculadora simples
+def calc():
+    try:
+        conta = eval(input("Hoobler: Digite a conta: "))
+        print("Hoobler:", conta)
+    except (ValueError, SyntaxError, NameError):
+        return "Something's wrong..."
+    
+    ch = input("Hoobler: Quer usar a calculadora novamente? s/n\n> ")
+    if ch.lower() in ('s', 'y'):
+        calc()
+    else: 
+        return "Ok."
 
 # Manual
 def help():

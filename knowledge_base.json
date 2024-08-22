@@ -62,19 +62,6 @@
     },
     {
       "question": [
-        "Goodbye",
-        "Bye",
-        "See you later"
-      ],
-      "answer": [
-        "Goodbye!",
-        "See you later!",
-        "Have a great day!",
-        "Bye!"
-      ]
-    },
-    {
-      "question": [
         "How old are you?",
         "When were you created?"
       ],
@@ -132,9 +119,9 @@
         "time",
         "what's the time?",
         "what time is it?",
-		"date",
-		"what's the date?",
-		"day"
+        "date",
+        "what's the date?",
+        "day"
       ],
       "answer": [],
       "function": "tell_time"
@@ -147,13 +134,32 @@
         "Can i help?"
       ]
     },
-	{
+    {
       "question": [
         "help",
-		"manual"
+        "manual"
       ],
-      "answer": [], 
-	  "function": "help"
+      "answer": [],
+      "function": "help"
+    },
+    {
+      "question": [
+        "calc",
+        "calcular",
+        "calculadora",
+        "calculator"
+      ],
+      "answer": [],
+      "function": "calc"
+    },
+    {
+      "question": [
+        "see you",
+        "see ya"
+      ],
+      "answer": [
+        "To exit the program, type 'exit'."
+      ]
     }
   ]
 }

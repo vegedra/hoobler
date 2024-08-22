@@ -22,12 +22,14 @@ def chat_bot():
         user_input = input('> ').strip()
 
         # Para fechar o programa
-        if user_input.lower() in ('quit', 'sair'):
+        if user_input.lower() in ('quit', 'sair', 'bye', 'tchau', 'adeus', 'goodbye', 'exit'):
+            print("Hoobler: See you later!")
             break
         elif user_input.lower() in ('remove question', 'remove entry'):
             question_to_remove = input('Which question would you like to remove? ')
             remove_question_from_knowledge_base(question_to_remove, knowledge_base)
             continue
+        
 
         # Procura a melhor resposta
         best_match = find_best_match(user_input, [q["question"] for q in knowledge_base["questions"]])
