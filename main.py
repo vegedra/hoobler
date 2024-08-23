@@ -10,6 +10,7 @@ Responder perguntas (wikipedia);
 Ser mais esperto;
 Modo terapia/ELIZA;
 Tentar implementar um SPELL CHECKER;
+Lidar com erro de localizacao invalida do wttr;
 Tentar escolher as respostas baseadas em contexto. """
 
 # Main Program
