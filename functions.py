@@ -1,9 +1,9 @@
 from datetime import datetime
+from calc import Calculator
 import core
 import random
 import requests
 import pyjokes
-from ast import literal_eval
 
 # Receber informações do clima.
 def get_weather():
@@ -40,15 +40,18 @@ def tell_time():
 
 # Calculadora simples
 def calc():
-    try:
-        conta = eval(input("Hoobler: Digite a conta: "))
-        print("Hoobler:", conta)
-    except (ValueError, SyntaxError, NameError):
-        return "Something's wrong..."
+    calcular = Calculator()
+    line = input("Hoobler: Digite a conta: ")
     
+    try:
+        print("Hoobler:", calcular.parse(line))
+    except SyntaxError as e:
+        print(f'Hoobler: {e.msg}')
+
     ch = input("Hoobler: Quer usar a calculadora novamente? s/n\n> ")
     if ch.lower() in ('s', 'y'):
-        calc()
+        conta = 0
+        return calc()
     else: 
         return "Ok."
 
