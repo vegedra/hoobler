@@ -169,8 +169,9 @@
 		"change language",
 		"setup"
       ],
-      "answer": [],
-      "function": "config"
+      "answer": [
+		"You can chenge options on the 'configs.txt' file."
+	  ]
     }
   ]
 }
