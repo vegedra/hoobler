@@ -1,9 +1,22 @@
 from datetime import datetime
-from calc import Calculator
-import core
+from src.calc import Calculator
+import src.functions
+import src.core
+import os
+import sys
 import random
 import requests
 import pyjokes
+import config as cfg
+
+# Get the parent directory of the current file (src folder)
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Add the parent directory to the sys.path
+sys.path.append(parent_dir)
+
+# Now you can import main
+import main
 
 # Receber informações do clima.
 def get_weather():
@@ -55,6 +68,15 @@ def calc():
     else: 
         return "Ok."
 
+# Ir pro setup novamente:
+def config():
+    ch = input("Hoobler: Deseja usar o setup novamente? s/n\n")
+    if ch.lower() in ('s', 'y'):
+        cfg.values['setup'] = 1
+        return main.setup()
+    else: 
+        return "Ok."
+        
 # Manual
 def help():
     # Printa um textao explicando o app ou abre um arquivo .txt?

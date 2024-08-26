@@ -161,6 +161,16 @@
       "answer": [
         "To exit the program, type 'exit'."
       ]
+    },
+	{
+      "question": [
+        "config",
+		"mudar idioma",
+		"change language",
+		"setup"
+      ],
+      "answer": [],
+      "function": "config"
     }
   ]
 }

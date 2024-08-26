@@ -1,7 +1,7 @@
 from difflib import get_close_matches
+import src.functions
 import json
 import random
-import functions
 
 # Carrega o arquivo JSON com a base da IA
 def load_knowledge_base(file_path):
@@ -39,7 +39,7 @@ def get_answer(user_question, knowledge_base):
         if any(question.lower() in user_question.lower() for question in q["question"]):
             if "function" in q:
                 func_name = q["function"]
-                func = getattr(functions, func_name, None)
+                func = getattr(src.functions, func_name, None)
                 if func:
                     return func()
             return random.choice(q["answer"])
