@@ -1,6 +1,5 @@
 from datetime import datetime
 from src.calc import Calculator
-import src.functions
 import src.core
 import os
 import sys
@@ -19,7 +18,7 @@ import main
 
 # Receber informações do clima.
 def get_weather():
-    city_name = input("\nEnter the name of the city or press ENTER to use current location: ")
+    city_name = input("\nHoobler: Enter the name of the city or press ENTER to use current location: ")
 
     # Usa o sistema WTTR para ver o clima - ?T - Remove cor e faz arte ASCII funcionar e o 0 para mostrar apenas
     # o clima atual

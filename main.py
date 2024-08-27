@@ -1,4 +1,5 @@
 from difflib import get_close_matches
+import importlib.resources
 import src.core
 import os
 import json
@@ -112,9 +113,14 @@ def aplicar_configuracoes(configuracoes):
         print("Error.")
 
 # Função principal do chat bot
-def chat_bot():
-    # Carregar base de conhecimento
-    knowledge_base = src.core.load_knowledge_base('knowledge_base.json')
+def main():
+    # Check if the knowledge base path is valid
+    try:
+        with importlib.resources.open_text('src', 'knowledge_base.json') as file:
+            knowledge_base = json.load(file)
+    except FileNotFoundError:
+        print("Error loading knowledge base: knowledge_base.json not found.")
+        return
     print("\n------- HOOBLER --------\n   by Pedro Ivo, 2024")
     
     # Loop principal
@@ -152,4 +158,4 @@ if __name__ == '__main__':
     else:
         configuracoes = carregar_configuracoes()
         aplicar_configuracoes(configuracoes)
-    chat_bot()
+    main()
