@@ -1,5 +1,5 @@
 from difflib import get_close_matches
-import config as cfg
+import src.config as cfg
 import importlib.resources
 import src.core
 import os
