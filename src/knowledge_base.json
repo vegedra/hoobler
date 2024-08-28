@@ -16,10 +16,9 @@
     },
     {
       "question": [
-        "How are you?",
-        "How do you do?",
-        "What's up?",
-		"whats up"
+        "How are you",
+        "How do you do",
+        "whats up"
       ],
       "answer": [
         "I'm doing well, thank you!",
@@ -30,8 +29,8 @@
     },
     {
       "question": [
-        "What is your name?",
-        "Who are you?"
+        "What is your name",
+        "Who are you"
       ],
       "answer": [
         "I'm Hoobler.",
@@ -40,7 +39,7 @@
     },
     {
       "question": [
-        "What can you do?",
+        "What can you do", "What do you do",
         "Tell me your abilities"
       ],
       "answer": [
@@ -63,8 +62,8 @@
     },
     {
       "question": [
-        "How old are you?",
-        "When were you created?"
+        "How old are you",
+        "When were you created"
       ],
       "answer": [
         "I'm timeless!",
