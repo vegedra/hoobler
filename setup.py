@@ -11,7 +11,9 @@ setup(
     },
     install_requires=[
         'curses; platform_system!="Windows"',
-        'windows-curses; platform_system=="Windows"'
+        'windows-curses; platform_system=="Windows"',
+        'pyjokes==0.6.0',
+        'requests==2.32.3'
     ],
     entry_points={
         'console_scripts': [
