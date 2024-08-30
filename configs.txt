@@ -1,6 +1,0 @@
-# Configurações do HOOBLER
-# Defina o idioma: 'pt' para Português, 'en' para Inglês, etc.
-idioma=en
-
-# Defina a interface: 'cli' para Linha de Comando, 'gui' para Interface Gráfica
-interface=cli
