@@ -52,28 +52,23 @@ def tell_time():
 # Calculadora simples
 def calc():
     calcular = Calculator()
-    line = input("Hoobler: Digite a conta: ")
+    line = input("Hoobler: Type math account: ")
     
     try:
         print("Hoobler:", calcular.parse(line))
     except SyntaxError as e:
         print(f'Hoobler: {e.msg}')
 
-    ch = input("Hoobler: Quer usar a calculadora novamente? s/n\n> ")
+    ch = input("Hoobler: Do you want to use the calculator again? y/n\n> ")
     if ch.lower() in ('s', 'y'):
         conta = 0
         return calc()
     else: 
         return "Ok."
 
-# Ir pro setup novamente:
-def config():
-    ch = input("Hoobler: Deseja usar o setup novamente? s/n\n")
-    if ch.lower() in ('s', 'y'):
-        cfg.values['setup'] = 1
-        return main.setup()
-    else: 
-        return "Ok."
+def tell_definition():
+    # Usa requests e algum site
+    return "Indev."
         
 # Manual
 def help():

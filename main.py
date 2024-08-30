@@ -1,5 +1,4 @@
 from difflib import get_close_matches
-import src.config as cfg
 import importlib.resources
 import src.core
 import os
@@ -8,14 +7,9 @@ import sys
 import random
 
 """ TODO: 
-Abrir programas;
-Responder perguntas (wikipedia); 
-Lidar com erro de localizacao invalida do wttr;
-Tentar escolher as respostas baseadas em contexto. """
-
-# Variáveis globais para armazenar configurações
-idioma = 'en'  # Valor padrão
-interface = 'cli'  # Valor padrão
+Abrir programas tipo cmd
+fazer o comando help
+Responder perguntas (wikipedia ou dicionario)  """
 
 # Função principal do chat bot
 def main():
@@ -33,11 +27,11 @@ def main():
         user_input = input('\n> ').strip()
 
         # Para fechar o programa
-        if user_input.lower() in ('quit', 'sair', 'bye', 'tchau', 'adeus', 'goodbye', 'exit'):
+        if user_input.lower() in ('quit', 'bye', 'goodbye', 'exit', 'abort'):
             print("Hoobler: See you later!")
             break
         elif user_input.lower() in ('remove question', 'remove entry'):
-            question_to_remove = input('Which question would you like to remove? ')
+            question_to_remove = input('Hoobler: Which question would you like to remove? ')
             src.core.remove_question_from_knowledge_base(question_to_remove, knowledge_base)
             continue
 
@@ -58,9 +52,4 @@ def main():
                 print('Hoobler: Thank you.')
 
 if __name__ == '__main__':
-    if not os.path.exists('configs.txt'):
-        cfg.criar_configuracao()
-    else:
-        configuracoes = cfg.carregar_configuracoes()
-        cfg.aplicar_configuracoes(configuracoes)
     main()

@@ -128,6 +128,15 @@
     },
     {
       "question": [
+        "what is",
+        "define",
+        "wikipedia"
+      ],
+      "answer": [],
+      "function": "tell_definition"
+    },
+    {
+      "question": [
         "?"
       ],
       "answer": [
@@ -146,7 +155,6 @@
       "question": [
         "calc",
         "calcular",
-        "calculadora",
         "calculator"
       ],
       "answer": [],
@@ -160,17 +168,6 @@
       "answer": [
         "To exit the program, type 'exit'."
       ]
-    },
-	{
-      "question": [
-        "config",
-		"mudar idioma",
-		"change language",
-		"setup"
-      ],
-      "answer": [
-		"You can chenge options on the 'configs.txt' file."
-	  ]
     }
   ]
 }
