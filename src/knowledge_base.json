@@ -73,9 +73,9 @@
     },
     {
       "question": [
-        "What is the weather like?",
-        "Tell me the weather",
-        "Weather report",
+        "what is the weather like?",
+        "tell me the weather",
+        "weather report",
         "weather"
       ],
       "answer": [],
@@ -83,9 +83,9 @@
     },
     {
       "question": [
-        "Tell me a joke",
-        "Joke",
-        "Make me laugh"
+        "tell me a joke",
+        "joke",
+        "make me laugh"
       ],
       "answer": [],
       "function": "tell_joke"
@@ -155,7 +155,9 @@
       "question": [
         "calc",
         "calcular",
-        "calculator"
+        "calculator",
+        "how much is",
+        "calculate"
       ],
       "answer": [],
       "function": "calc"
@@ -168,6 +170,24 @@
       "answer": [
         "To exit the program, type 'exit'."
       ]
+    },
+	{
+      "question": [
+        "dice",
+        "roll dice",
+        "random"
+      ],
+      "answer": [],
+      "function": "roll_dice"
+    },
+    {
+      "question": [
+        "clear",
+        "clear screen",
+        "cls"
+      ],
+      "answer": [],
+      "function": "cls"
     }
   ]
 }

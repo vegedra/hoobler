@@ -1,4 +1,6 @@
 from difflib import get_close_matches
+from nltk.corpus import wordnet
+import nltk
 import importlib.resources
 import src.core
 import os
@@ -13,6 +15,8 @@ Responder perguntas (wikipedia ou dicionario)  """
 
 # Função principal do chat bot
 def main():
+    # Baixa dicionario do nltk
+    nltk.download('wordnet')
     # Verifica se o arquivo JSON existe
     try:
         with importlib.resources.open_text('src', 'knowledge_base.json') as file:
@@ -21,6 +25,7 @@ def main():
         print("Error loading knowledge base: knowledge_base.json not found.")
         return
     print("\n------- HOOBLER --------\n   by Pedro Ivo, 2024")
+    print("\nHoobler: Talk with me! Type 'help' for help.")
     
     # Loop principal
     while True:
